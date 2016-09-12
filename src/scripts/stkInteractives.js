@@ -57,26 +57,26 @@ var stkGphx = {
 					};
 					return stkGphx.unlockCheck(e);
 				});
-				$('body').bind('touchstart', function(e){
-					clearTimeout(stkGphx.scrollerInstance);
-					stkGphx.touchX0 = e.touches[0].clientX;
-					return stkGphx.unlockCheck(e);
-				});
-				$('body').bind('touchend', function(e){
-					// e.preventDefault();
-					clearTimeout(stkGphx.scrollerInstance);
-					stkGphx.touchX1 = e.originalEvent.changedTouches[0].clientX;
-					if(stkGphx.touchX1 - stkGphx.touchX0 > 50) {
-						stkGphx.headshotScroller(1);
-					} else if(stkGphx.touchX1 - stkGphx.touchX0 < -50){
-						stkGphx.headshotScroller(0);
-					};
-					return stkGphx.unlockCheck(e);
-				});
-				$('body').bind('touchmove', function(e){
-					clearTimeout(stkGphx.scrollerInstance);
-					return stkGphx.unlockCheck(e);
-				});
+			// 	$('body').bind('touchstart', function(e){
+			// 		clearTimeout(stkGphx.scrollerInstance);
+			// 		stkGphx.touchX0 = e.touches[0].clientX;
+			// 		return stkGphx.unlockCheck(e);
+			// 	});
+			// 	$('body').bind('touchend', function(e){
+			// 		// e.preventDefault();
+			// 		clearTimeout(stkGphx.scrollerInstance);
+			// 		stkGphx.touchX1 = e.originalEvent.changedTouches[0].clientX;
+			// 		if(stkGphx.touchX1 - stkGphx.touchX0 > 50) {
+			// 			stkGphx.headshotScroller(1);
+			// 		} else if(stkGphx.touchX1 - stkGphx.touchX0 < -50){
+			// 			stkGphx.headshotScroller(0);
+			// 		};
+			// 		return stkGphx.unlockCheck(e);
+			// 	});
+			// 	$('body').bind('touchmove', function(e){
+			// 		clearTimeout(stkGphx.scrollerInstance);
+			// 		return stkGphx.unlockCheck(e);
+			// 	});
 			// } else if(stkGphx.isScrolledIntoView('.stkCities')){
 			// 	// Firefox
 			// 	$('body').bind('DOMMouseScroll', function(e){
@@ -139,14 +139,18 @@ var stkGphx = {
 			var pos = center.data('pos');
 			var newPos;
 			var domStats = $('.statNum');
-			if(direction == 0 && pos > 0){
+			if(pos != 0 && direction == 0) {
 				newPos = pos - 1;
 				center.removeClass('center').addClass('right');
 				$('.slide--' + newPos).addClass('center').removeClass('left');
-			} else if(direction == 1 && pos < 3){
+				$('.slidePos').removeClass('active');
+				$('.slidePos--' + newPos).addClass('active');
+			} else if(pos != 3 && direction == 1){
 				newPos = pos + 1;
 				center.removeClass('center').addClass('left');
 				$('.slide--' + newPos).addClass('center').removeClass('right');
+				$('.slidePos').removeClass('active');
+				$('.slidePos--' + newPos).addClass('active');
 			} else {
 				stkGphx.unlock = true;
 			};
@@ -190,8 +194,6 @@ var stkGphx = {
 			stkGphx.unlock = false;
 			var active = $('.activeCity');
 			var pos = active.data('city');
-			var newPos;
-			var domStats = $('.statNum');
 			if(direction == -1 && pos > 0){
 				stkGphx.populateNewCity(pos-1);
 			} else if(direction == 1 && pos < 5){
@@ -208,7 +210,7 @@ var stkGphx = {
 		var childDivs = $(childDivClass);
 		var childDivWidth = $(childDivs[0]).width();
 		var animating = false;
-		var currDiv, newDiv, currDivPos, newDivPos, divNum;
+		var divNum;
 		// On window resize, the childDivWidth is recalculated. This is a potentially wasteful and 
 		// unnecessary function that I may phase out in the future. It is a soft patch for now.
 		var resizeId;
@@ -263,7 +265,6 @@ var stkGphx = {
 		var currCity = $('.cityOutline--'+cityNum);
 		var scrollDiv = $('.cities');
 		var childDivWidth = $('.cityOutline--0').width();
-		var animating = false;
 		var resizeId;
 		$(window).resize(function(){
 			clearTimeout(resizeId);
