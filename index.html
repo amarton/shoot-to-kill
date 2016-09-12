@@ -17,6 +17,7 @@
     <!--Mobile Specific Metas-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!--CSS-->
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css">
     <link rel="stylesheet" type="text/css" href="dist/stylesheets/style.css">
     <!--Fonts-->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Prata|Roboto+Condensed:400,700">
@@ -241,31 +242,6 @@
       </div>
     </section>
     <!--load photo gallery			-->
-    <div class="overlay"></div>
-    <div class="gallery" id="gallery">
-      <div class="gallery__visible-photo">
-        <div class="gallery__photos">
-          <div class="gallery__photo" style="background-image: url('dist/images/example.jpg')"></div>
-          <div class="gallery__photo" style="background-image: url('dist/images/example.jpg')"></div>
-          <div class="gallery__photo" style="background-image: url('dist/images/example.jpg')"></div>
-        </div>
-        <div class="gallery__caption"></div>
-      </div>
-      <div class="gallery__info">
-        <div class="gallery__progress-bar"></div>
-        <div class="gallery__toggle-caption">
-          <div class="gallery__control gallery__control--clickable">CAPTION</div>
-        </div>
-        <div class="gallery__controls">
-          <div class="gallery__control gallery__control--slide gallery__control--clickable" data-dir="left"><span class="icon-arrow-left3"></span></div>
-          <div class="gallery__control gallery__control--counter"><span id="gallery__current-img"> 1 </span> of 3</div>
-          <div class="gallery__control gallery__control--slide gallery__control--clickable" data-dir="right"><span class="icon-arrow-right3"></span></div>
-        </div>
-        <div class="gallery__close">
-          <div class="gallery__control gallery__control--close gallery__control--clickable"><span class="icon-close"></span></div>
-        </div>
-      </div>
-    </div>
     <section id="intro">
       <div class="container container--article">
         <div class="article">
@@ -501,15 +477,50 @@
           </div>
         </div>
       </div>
-      <!--full-width interactive-->  <div class="container--interactive">
-      <div style="height:400px;max-width:2000px;background:#000;"></div>
-    </div>
- 
-
-
-
+      <div class="stkHeadshots">
+        <div class="slidesWrapper">
+          <div class="slide slide--0 center" data-pos="0">
+            <h3><span>Homicides </span>have fluctuated</h3>
+            <p class="subhead">But have generally remained high during the past 15 years</p>
+          </div>
+          <div class="slide slide--1 right" data-pos="1">
+            <h3>Homicides <span>by shootings </span>has risen</h3>
+            <p class="subhead">From 77% (203) of total homicides in 2000 to 87% (300) in 2015</p>
+          </div>
+          <div class="slide slide--2 right" data-pos="2">
+            <h3><span>Headshots </span>are particularly lethal</h3>
+            <p class="subhead">Victims killed by headshot are up from 82 (40%) in 2000  to 186 (62%) in 2015</p>
+          </div>
+          <div class="slide slide--3 right" data-pos="3">
+            <h3><span>Multiple gunshot </span>victims are up</h3>
+            <p class="subhead">
+              Victims suffering from multiple gunshots is up from 127 (59%) in 2005  to 211 (70%) in 2015</p>
+          </div>
+          <div class="arrowsWrapper"><i class="icon-left-dir arrow arrow--left" data-dir="0"></i><i class="icon-right-dir arrow arrow--right" data-dir="1"></i></div>
+        </div>
+        <div class="statsWrapper">
+          <div class="stat stat--0">
+            <p class="statNum"><span class="dig dig0">1</span><span class="dig dig1">2</span><span class="dig dig2">3</span></p>
+            <p class="year">2000</p>
+          </div>
+          <div class="stat stat--1">
+            <p class="statNum"><span class="dig dig0">2</span><span class="dig dig1">3</span><span class="dig dig2">4</span></p>
+            <p class="year">2005</p>
+          </div>
+          <div class="stat stat--2">
+            <p class="statNum"><span class="dig dig0">3</span><span class="dig dig1">4</span><span class="dig dig2">5</span></p>
+            <p class="year">2010</p>
+          </div>
+          <div class="stat stat--3">
+            <p class="statNum"><span class="dig dig0">4</span><span class="dig dig1">5</span><span class="dig dig2">6</span></p>
+            <p class="year">2015</p>
+          </div>
+        </div>
+      </div>
+      <!--full-width interactive-->
       <div class="container container--article">
         <div class="article">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <hr>
           <figure class="inline-media inline-media--graphic inline-media--big" data-sr>
@@ -556,8 +567,39 @@
 </svg>
 <span>Lethality rates</span><span class="inline-media--graphic__title--red"> across the United States</span>
             </h4>
-            <div class="inline-media inline-media--graphic__chatter">Baltimore is among the most lethal cities in the country. See how we compare to other major cities below.</div><img class="img-responsive" src="dist/images/shootings.png">
+            <div class="inline-media inline-media--graphic__chatter">Baltimore is among the most lethal cities in the country. See how we compare to other major cities below.</div>
           </figure>
+        </div>
+      </div>
+      <div class="stkCities">
+        <div class="graphic">
+          <div class="cities">
+            <div class="cityOutline cityOutline--0 activeCity" data-city="0"><img src="http://data.baltimoresun.com/jin/shoot-to-kill/images/0.png"></div>
+            <div class="cityOutline cityOutline--1" data-city="1"><img src="http://data.baltimoresun.com/jin/shoot-to-kill/images/1.png"></div>
+            <div class="cityOutline cityOutline--2" data-city="2"><img src="http://data.baltimoresun.com/jin/shoot-to-kill/images/2.png"></div>
+            <div class="cityOutline cityOutline--3" data-city="3"><img src="http://data.baltimoresun.com/jin/shoot-to-kill/images/3.png"></div>
+            <div class="cityOutline cityOutline--4" data-city="4"><img src="http://data.baltimoresun.com/jin/shoot-to-kill/images/4.png"></div>
+            <div class="cityOutline cityOutline--5" data-city="5"><img src="http://data.baltimoresun.com/jin/shoot-to-kill/images/5.png"></div>
+            <div class="cityOutline" data-city="5"></div>
+          </div>
+          <div class="cityNameBlock">
+            <h3 class="cityName jsFade">Baltimore</h3>
+          </div>
+          <div class="cityStats">
+            <div class="statList">
+              <h4>2015 statistics</h4>
+              <p>Non-fatal shootings: <span class="nonFatStat jsFade">300</span></p>
+              <p>Fatal shootings: <span class="fatStat jsFade">637</span></p>
+              <p>Fatal / non-fatal ratio: <span class="ratioStat jsFade">0.47</span></p>
+            </div>
+            <div class="graph">
+              <h4>Ratio over time</h4><img class="jsFade" src="http://data.baltimoresun.com/jin/shoot-to-kill/images/graph0.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container container--article">
+        <div class="article">
           <hr>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -606,10 +648,16 @@
 </svg>
 <span>Baltimore's most</span><span class="inline-media--graphic__title--red"> lethal neighborhoods</span>
             </h4>
-            <div class="inline-media inline-media--graphic__chatter">We ranked Baltimore neighborhoods by their lethality rates. Click on a neighborhood below to see its statistics.</div><img class="img-responsive" src="dist/images/map.png">
+            <div class="inline-media inline-media--graphic__chatter">We ranked Baltimore neighborhoods by their lethality rates. Click on a neighborhood below to see its statistics.</div>
           </figure>
+          <div class="stkNeighborhoods">
+            <div class="map" id="map"></div><a href="https://baltsun.carto.com/viz/798d62cc-6b9e-11e6-834a-0e05a8b3e3d7/embed_map" target="_blank" rel="noopener">Click here to open the map in a new window.</a>
+          </div>
+        </div>
+      </div>
+      <div class="container container--article">
+        <div class="article">
           <hr>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p class="reporter-email">Contact reporter at <a href="mailto:#" target="_blank"> reporter email </a></p>
         </div>
@@ -681,6 +729,7 @@
     <!--Load the rest-->
     <script src="https://use.typekit.net/nta3eyd.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
     <script src="dist/min/app.min.js"></script>
     <!--Configuration for scrollReveal.js-->
     <script>

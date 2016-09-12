@@ -17,7 +17,7 @@ block content
 						span.header__chatter--red How did we get there?
 
 		//load photo gallery			
-		include includes/_gallery.pug
+		//- include includes/_gallery.pug
 
 		section#intro
 			.container.container--article
@@ -145,12 +145,15 @@ block content
 							include ../dist/images/gun.svg 
 							span Lethality
 							span.inline-media--graphic__title--red  in Baltimore
+			include includes/stkHeadshots.pug
 			
 			//full-width interactive
-			include includes/interactives/example.html
+			//- include includes/interactives/example.html
 
 			.container.container--article
 				.article
+
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -161,7 +164,10 @@ block content
 							span Lethality rates
 							span.inline-media--graphic__title--red  across the United States
 						div.inline-media.inline-media--graphic__chatter Baltimore is among the most lethal cities in the country. See how we compare to other major cities below.
-						img(src="dist/images/shootings.png" class="img-responsive")
+						//- img(src="dist/images/shootings.png" class="img-responsive")
+			include includes/stkCities.pug
+			.container.container--article
+				.article
 					hr
 
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -176,10 +182,11 @@ block content
 							span Baltimore's most
 							span.inline-media--graphic__title--red  lethal neighborhoods
 						div.inline-media.inline-media--graphic__chatter We ranked Baltimore neighborhoods by their lethality rates. Click on a neighborhood below to see its statistics.
-						img(src="dist/images/map.png" class="img-responsive")
+						//- img(src="dist/images/map.png" class="img-responsive")
+					include includes/stkNeighborhoods.pug
+			.container.container--article
+				.article
 					hr
-
-					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

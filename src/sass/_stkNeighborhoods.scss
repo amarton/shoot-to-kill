@@ -1,0 +1,39 @@
+.stkNeighborhoods {
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: white;
+	color: $offblack;
+	h2 {
+		margin: 0.5em 0em;
+		font-family: $franklin;
+		font-size: 26px;
+		font-weight: 700;
+		text-transform: uppercase;
+		span {
+			color: $stkRed;
+			@media(max-width: $bp5) {
+				font-size: 20px;
+				display: block;
+			}
+		}
+	}
+	p, a {
+		font-family: $franklin;
+		font-size: 14px;
+		font-weight: 700;
+	}
+	p {
+		color: $stkDarkGray;
+	}
+	a {
+		color: $goldenrod;
+		text-decoration: none;
+	}
+	.map {
+		height: 400px;
+		margin-top: 2em;
+		@media(max-width: $bp6) {
+			display: none;
+		}
+	}
+}
