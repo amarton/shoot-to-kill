@@ -145,12 +145,22 @@ var stkGphx = {
 				$('.slide--' + newPos).addClass('center').removeClass('left');
 				$('.slidePos').removeClass('active');
 				$('.slidePos--' + newPos).addClass('active');
+				 if (newPos == 0) {
+					$('.arrow--left').addClass('inactive');
+				} else {
+					$('.arrow').removeClass('inactive');
+				};
 			} else if(pos != 3 && direction == 1){
 				newPos = pos + 1;
 				center.removeClass('center').addClass('left');
 				$('.slide--' + newPos).addClass('center').removeClass('right');
 				$('.slidePos').removeClass('active');
 				$('.slidePos--' + newPos).addClass('active');
+				if(newPos == 3){
+					$('.arrow--right').addClass('inactive');
+				} else {
+					$('.arrow').removeClass('inactive');
+				};
 			} else {
 				stkGphx.unlock = true;
 			};

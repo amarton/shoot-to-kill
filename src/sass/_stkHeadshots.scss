@@ -98,6 +98,11 @@
 		vertical-align: middle;
 		font-size: 2em;
 		cursor: pointer;
+		@include transition(color .5s ease);
+		&.inactive {
+			color: $stkDarkGray;
+			cursor: default;
+		}
 		&--left {
 			// left: .3em;
 		}
@@ -109,6 +114,7 @@
 		vertical-align: middle;
 		line-height: 2em;
 		color: $stkDarkGray;
+		@include transition(color .5s ease);
 		&.active {
 			color: white;
 		}
