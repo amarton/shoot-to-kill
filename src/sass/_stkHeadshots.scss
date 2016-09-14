@@ -1,7 +1,7 @@
 .stkHeadshots {
 	position: relative;
 	width: 100%;
-	height: 320px;
+	height: 340px;
 	padding: 2em 0;
 	margin-bottom: 1em;
 	background-color: $offblack;
@@ -12,30 +12,47 @@
 	overflow: hidden;
 	@media(max-width: $bp7) {
 		font-size: 12px;
-		height: 300px;
+		// height: 300px;
 	}
 	.slidesWrapper {
 		position: relative;
 		top: 0;
-		height: 45%;
+		height: 30%;
 		max-width: 800px;
 		margin: 0 auto;
+		@media(max-width: $bp5) {
+			height: 40%;
+		}
 	}
 	h3 {
 		width: 100%;
 		margin: 0 auto;
-		font-size: 2.4em;
+		font-size: 2.7em;
 		span {
 			color: $stkRed;
 		}
-		@media(max-width: $bp5) {
-			font-size: 2em;
+		@media(max-width: $bp8) {
+			padding: 0 .2em;
+			font-size: 2.4em;
+		}
+		@media(max-width: $bp7) {
+			font-size: 2.2em;
+		}
+		@media(max-width: $bp6) {
+			font-size: 1.9em;
 		}
 	}
 	.subhead {
 		width: 100%;
 		margin: 1em auto;
 		color: white;
+		font-size: 1.15em;
+		@media(max-width: $bp7) {
+			width: 70%;
+		}
+		@media(max-width: $bp5) {
+			width: 90%;
+		}
 	}
 	.slide {
 		width: 100%;
@@ -74,7 +91,7 @@
 		width: 100%;
 		margin: 0;
 		color: white;
-		font-size: 3.7em;
+		font-size: 4em;
 		font-family: $prata;
 	}
 	.year {
@@ -83,20 +100,30 @@
 		width: 100%;
 		margin: 0;
 		color: $stkRed;
-		font-size: 1.2em;
+		font-size: 1.5em;
 		font-family: $franklin;
 	}
 	.arrowsWrapper {
 		position: relative;
+		top: -40%;
 		width: 100%;
-		max-width: 800px;
-		margin: 1em auto;
-		text-align: center;
+		min-width: 320px;
+		max-width: 1200px;
+		margin: 0 auto;
+		z-index: 2;
+		@media(max-width: $bp9) {
+			width: 70%;
+			position: relative;
+			top: 10%;
+			margin: 0 auto;
+		}
+		@media(max-width: $bp5) {
+			top: 0;
+		}
 	}
 	.arrow {
-		// position: absolute;
-		vertical-align: middle;
-		font-size: 2em;
+		position: absolute;
+		font-size: 5em;
 		cursor: pointer;
 		@include transition(color .5s ease);
 		&.inactive {
@@ -104,19 +131,44 @@
 			cursor: default;
 		}
 		&--left {
-			// left: .3em;
+			left: 0;
 		}
 		&--right {
-			// right: .3em;
+			right: 0;
+		}
+		@media(max-width: $bp9) {
+			font-size: 2.5em;
+			line-height: 1.5em;
+			&--left {
+				left: 1.5em;
+			}
+			&--right {
+				right: 1.5em;
+			}
+		}
+	}
+	.positionWrapper {
+		position: relative;
+		top: 10%;
+		width: 100%;
+		max-width: 800px;
+		margin: 1em auto;
+		text-align: center;
+		z-index: 1;
+		@media(max-width: $bp5) {
+			top: 0;
 		}
 	}
 	.slidePos {
+		margin: 0 .2em;
 		vertical-align: middle;
-		line-height: 2em;
+		font-size: 1.5em;
 		color: $stkDarkGray;
+		cursor: pointer;
 		@include transition(color .5s ease);
 		&.active {
 			color: white;
+			cursor: default;
 		}
 	}
 }

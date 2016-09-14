@@ -26,93 +26,93 @@ var stkGphx = {
 		stkGphx.neighborhoods();
 	},
 	scrollFuncs: function(){
-		$(window).scroll(function(){
-			if(stkGphx.isScrolledIntoView('.stkHeadshots')){
-				// Firefox
-				$('body').bind('DOMMouseScroll', function(e){
-					clearTimeout(stkGphx.scrollerInstance);
-					if(e.originalEvent.detail > 0) {
-						stkGphx.headshotScroller(1);
-					} else {
-						stkGphx.headshotScroller(0);
-					};
-					return stkGphx.unlockCheck(e);
-				});
-				//IE, Opera, Safari
-				$('body').bind('mousewheel', function(e){
-					clearTimeout(stkGphx.scrollerInstance);
-					if(e.originalEvent.wheelDelta < 0) {
-						stkGphx.headshotScroller(1);
-					} else {
-						stkGphx.headshotScroller(0);
-					};
-					return stkGphx.unlockCheck(e);
-				});
-				$('body').bind('keydown', function(e){
-					clearTimeout(stkGphx.scrollerInstance);
-					if(e.keyCode == 40) {
-						stkGphx.headshotScroller(1);
-					} else if(e.keyCode == 38) {
-						stkGphx.headshotScroller(0);
-					};
-					return stkGphx.unlockCheck(e);
-				});
-			// 	$('body').bind('touchstart', function(e){
-			// 		clearTimeout(stkGphx.scrollerInstance);
-			// 		stkGphx.touchX0 = e.touches[0].clientX;
-			// 		return stkGphx.unlockCheck(e);
-			// 	});
-			// 	$('body').bind('touchend', function(e){
-			// 		// e.preventDefault();
-			// 		clearTimeout(stkGphx.scrollerInstance);
-			// 		stkGphx.touchX1 = e.originalEvent.changedTouches[0].clientX;
-			// 		if(stkGphx.touchX1 - stkGphx.touchX0 > 50) {
-			// 			stkGphx.headshotScroller(1);
-			// 		} else if(stkGphx.touchX1 - stkGphx.touchX0 < -50){
-			// 			stkGphx.headshotScroller(0);
-			// 		};
-			// 		return stkGphx.unlockCheck(e);
-			// 	});
-			// 	$('body').bind('touchmove', function(e){
-			// 		clearTimeout(stkGphx.scrollerInstance);
-			// 		return stkGphx.unlockCheck(e);
-			// 	});
-			// } else if(stkGphx.isScrolledIntoView('.stkCities')){
-			// 	// Firefox
-			// 	$('body').bind('DOMMouseScroll', function(e){
-			// 		clearTimeout(stkGphx.scrollerInstance);
-			// 		if(e.originalEvent.detail > 0) {
-			// 			stkGphx.cityScroller(1);
-			// 		} else {
-			// 			stkGphx.cityScroller(-1);
-			// 		};
-			// 		return stkGphx.unlockCheck(e);
-			// 	});
-			// 	//IE, Opera, Safari
-			// 	$('body').bind('mousewheel', function(e){
-			// 		clearTimeout(stkGphx.scrollerInstance);
-			// 		if(e.originalEvent.wheelDelta < 0) {
-			// 			stkGphx.cityScroller(1);
-			// 		} else {
-			// 			stkGphx.cityScroller(-1);
-			// 		};
-			// 		return stkGphx.unlockCheck(e);
-			// 	});
-			// 	$('body').bind('keydown', function(e){
-			// 		clearTimeout(stkGphx.scrollerInstance);
-			// 		if(e.keyCode == 40) {
-			// 			stkGphx.cityScroller(1);
-			// 		} else if(e.keyCode == 38) {
-			// 			stkGphx.cityScroller(-1);
-			// 		};
-			// 		return stkGphx.unlockCheck(e);
-			// 	});
-			} else {
-				$('body').unbind();
-				stkGphx.unlock = true;
-			};
-			return false;
-		});
+		// $(window).scroll(function(){
+		// 	if(stkGphx.isScrolledIntoView('.stkHeadshots')){
+		// 		// Firefox
+		// 		$('body').bind('DOMMouseScroll', function(e){
+		// 			clearTimeout(stkGphx.scrollerInstance);
+		// 			if(e.originalEvent.detail > 0) {
+		// 				stkGphx.headshotScroller(1);
+		// 			} else {
+		// 				stkGphx.headshotScroller(0);
+		// 			};
+		// 			return stkGphx.unlockCheck(e);
+		// 		});
+		// 		//IE, Opera, Safari
+		// 		$('body').bind('mousewheel', function(e){
+		// 			clearTimeout(stkGphx.scrollerInstance);
+		// 			if(e.originalEvent.wheelDelta < 0) {
+		// 				stkGphx.headshotScroller(1);
+		// 			} else {
+		// 				stkGphx.headshotScroller(0);
+		// 			};
+		// 			return stkGphx.unlockCheck(e);
+		// 		});
+		// 		$('body').bind('keydown', function(e){
+		// 			clearTimeout(stkGphx.scrollerInstance);
+		// 			if(e.keyCode == 40) {
+		// 				stkGphx.headshotScroller(1);
+		// 			} else if(e.keyCode == 38) {
+		// 				stkGphx.headshotScroller(0);
+		// 			};
+		// 			return stkGphx.unlockCheck(e);
+		// 		});
+		// 	// 	$('body').bind('touchstart', function(e){
+		// 	// 		clearTimeout(stkGphx.scrollerInstance);
+		// 	// 		stkGphx.touchX0 = e.touches[0].clientX;
+		// 	// 		return stkGphx.unlockCheck(e);
+		// 	// 	});
+		// 	// 	$('body').bind('touchend', function(e){
+		// 	// 		// e.preventDefault();
+		// 	// 		clearTimeout(stkGphx.scrollerInstance);
+		// 	// 		stkGphx.touchX1 = e.originalEvent.changedTouches[0].clientX;
+		// 	// 		if(stkGphx.touchX1 - stkGphx.touchX0 > 50) {
+		// 	// 			stkGphx.headshotScroller(1);
+		// 	// 		} else if(stkGphx.touchX1 - stkGphx.touchX0 < -50){
+		// 	// 			stkGphx.headshotScroller(0);
+		// 	// 		};
+		// 	// 		return stkGphx.unlockCheck(e);
+		// 	// 	});
+		// 	// 	$('body').bind('touchmove', function(e){
+		// 	// 		clearTimeout(stkGphx.scrollerInstance);
+		// 	// 		return stkGphx.unlockCheck(e);
+		// 	// 	});
+		// 	// } else if(stkGphx.isScrolledIntoView('.stkCities')){
+		// 	// 	// Firefox
+		// 	// 	$('body').bind('DOMMouseScroll', function(e){
+		// 	// 		clearTimeout(stkGphx.scrollerInstance);
+		// 	// 		if(e.originalEvent.detail > 0) {
+		// 	// 			stkGphx.cityScroller(1);
+		// 	// 		} else {
+		// 	// 			stkGphx.cityScroller(-1);
+		// 	// 		};
+		// 	// 		return stkGphx.unlockCheck(e);
+		// 	// 	});
+		// 	// 	//IE, Opera, Safari
+		// 	// 	$('body').bind('mousewheel', function(e){
+		// 	// 		clearTimeout(stkGphx.scrollerInstance);
+		// 	// 		if(e.originalEvent.wheelDelta < 0) {
+		// 	// 			stkGphx.cityScroller(1);
+		// 	// 		} else {
+		// 	// 			stkGphx.cityScroller(-1);
+		// 	// 		};
+		// 	// 		return stkGphx.unlockCheck(e);
+		// 	// 	});
+		// 	// 	$('body').bind('keydown', function(e){
+		// 	// 		clearTimeout(stkGphx.scrollerInstance);
+		// 	// 		if(e.keyCode == 40) {
+		// 	// 			stkGphx.cityScroller(1);
+		// 	// 		} else if(e.keyCode == 38) {
+		// 	// 			stkGphx.cityScroller(-1);
+		// 	// 		};
+		// 	// 		return stkGphx.unlockCheck(e);
+		// 	// 	});
+		// 	} else {
+		// 		$('body').unbind();
+		// 		stkGphx.unlock = true;
+		// 	};
+		// 	return false;
+		// });
 		$('.arrow').on('click', function(){
 			stkGphx.headshotScroller(Number($(this).data('dir')));
 		});
@@ -120,7 +120,7 @@ var stkGphx = {
 			stkGphx.populateNewCity($(this).data('city'));
 			return false;
 		});
-		stkGphx.scrollSnap('.stkCities .cities','.cityOutline');
+		// stkGphx.scrollSnap('.stkCities .cities','.cityOutline');
 	},
 	// isScrolledIntoView takes an element name as an argument and compares it to the positions
 	// of the window to see if the element is within view.
@@ -312,7 +312,7 @@ var stkGphx = {
 			infowindow: true,
 			center_lat: 39.264492,
 			center_lon: -76.612630,
-			zoom: 11
+			zoom: 12
 		})
 		.done(function(vis, layers) {
 		  layers[1].setInteraction(true);
