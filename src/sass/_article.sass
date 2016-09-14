@@ -11,7 +11,7 @@
 			size: 1em
 		color: $dark-grey
 		line-height: 1.5
-		margin: 0 10% 25px 10%
+		margin: 10px 10% 15px 10%
 		+links(maroon, underline)
 		@media (max-width: $no-rail)
 			margin: 0 auto 25px auto
@@ -85,7 +85,7 @@
 				margin: 17px 10px 0 0
 
 	&__chapter-title
-		margin: 0 10% 20px 10%
+		margin: 50px 10% 20px 10%
 		max-width: 800px
 		font-weight: 700
 		@media (max-width: $no-rail)
@@ -95,9 +95,9 @@
 			font:
 				family: $franklin
 				size: 1.7em
-			color: $light-grey
+			color: $dark-grey
 			@media (max-width: $size-phone1)
-				font-size: 1.5em
+				font-size: 1.3em
 
 			svg
 				width: 25px
@@ -106,6 +106,10 @@
 				path
 					color: $light-grey
 					fill: $light-grey
+				@media (max-width: $size-phone1)
+					width: 20px
+					height: 20px
+					padding-top: 6px
 
 		&__text
 			display: inline-block
@@ -115,7 +119,7 @@
 			color: $dark-red
 			position: relative
 			@media (max-width: $size-phone1)
-				font-size: 3em
+				font-size: 2.3em
 
 
 
@@ -151,7 +155,7 @@
 	&--big
 		width: 800px
 		margin: 0 10% 0 10%
-		@media (max-width: 730px)
+		@media (max-width: 960px)
 			float: none
 			width: 95%
 			margin: 40px auto
@@ -194,7 +198,10 @@
 		color: $dark-red
 		font:
 			family: $prata
-			size: 30px
+			size: 2em
+
+		@media (max-width: 960px)
+			font-size: 1.5em
 
 		&__text
 			padding: 0 10px 0 10px
@@ -224,7 +231,7 @@
 			float: left
 			color: $dark-grey
 			@media (max-width: $size-phone1)
-				font-size: 1.8em
+				font-size: 1.5em
 
 			svg
 				height: 30px
@@ -232,6 +239,10 @@
 				padding-top: 10px
 				path
 					fill: $dark-red
+				@media (max-width: $size-phone1)
+					height: 25px
+					width: 25px
+					padding-top: 8px
 
 			&--red
 				color: $dark-red !important
@@ -239,7 +250,6 @@
 		&__chatter
 			font:
 				family: $franklin !important
-				size: 1.1em !important
 				weight: 700
 
 
@@ -318,15 +328,26 @@
 		background-color: black
 		position: relative
 
-		@media (max-width: 730px)
+		@media (max-width: 1200px)
 			padding-top: 56.25%
+		
 
 		iframe
-			position: absolute
-			top: 0
-			left: 0
-			+size(100%)
-			border: 0
+			display: block
+			margin: 0 auto
+
+			@media (min-width: 1900px)
+				width: 50%
+
+			@media (max-width: 1900px)
+				width: 60%
+
+			@media (max-width: 1200px)
+				position: absolute
+				top: 0
+				left: 0
+				+size(100%)
+
 	&--timeline
 		float: right
 		position: relative
