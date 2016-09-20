@@ -23,6 +23,12 @@ html(class="no-js", lang="en")
 		link(rel="stylesheet", href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css")
 		link(rel="stylesheet", type="text/css", href="dist/stylesheets/style.css")
 
+		//Call html5shiv for IE9 and an alt stylesheet for IE8 fallback
+		//if lt IE 9
+			script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js")
+		//if IE 8
+			link(rel="stylesheet", href="dist/stylesheets/ie8-and-down.css")
+
 		//Fonts
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Prata|Roboto+Condensed:400,700")
 
@@ -53,11 +59,45 @@ html(class="no-js", lang="en")
 		- for (var i = 1; i <= 3; i++)
 			link(rel="prefetch" href="")
 
-	body
-		//script(src="http://www.baltimoresun.com/thirdpartyservice?disablessor=true")
-		//div(data-trb-thirdpartynav)
+	body(onload="init();")
+		div#intro
+			canvas(id="canvas", width="1000", height="600")
+				p Be sure to enable JavaScript and use an updated browser to experience this presentation<br />
+				img(src="dist/images/s2k-logo.png")
+			button#open-button READ STORY
+		nav#tophat.navbar.navbar-fixed-top.navbar-inverse
+			div.container-fluid
+				div.navbar-header
+					button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tophat-collapse" aria-expanded="false")
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					#logo
+						a(href="http://www.baltimoresun.com")
+							img(src="dist/images/baltimore-sun-logo-white.png")
+					.tophat-share-tools
+						span.icon-facebook
+						span.icon-twitter
 
-		#tophat
+				div#tophat-collapse.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						li.chapter
+							a(href="#chapter-1")
+								span Chapter 1
+						li.chapter
+							a(href="#chapter-2")
+								span Chapter 2
+						li.dropdown
+							a(href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Series 
+								div.caret
+							ul.dropdown-menu
+								li
+									a(href="#") Title of the second story
+								li
+									a(href="#") Title of the third story
+
+		//nav#tophat
 			.group
 				#logo
 					a(href="http://www.baltimoresun.com")
@@ -118,7 +158,9 @@ html(class="no-js", lang="en")
 		script(src="https://use.typekit.net/nta3eyd.js")
 		script.
 			try{Typekit.load({ async: true });}catch(e){}
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
 		script(src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js")
+		script(src="https://code.createjs.com/createjs-2015.11.26.min.js")
 		script(src="dist/min/app.min.js")
 
 		//Configuration for scrollReveal.js
@@ -130,3 +172,8 @@ html(class="no-js", lang="en")
 			 	vFactor: 0.5
 			}
 			window.sr = new scrollReveal(config);
+
+			$('#open-button').click(function() {
+			$('#intro').toggleClass('close');
+			$('#open-button').hide();
+			});

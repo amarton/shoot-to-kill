@@ -19,6 +19,13 @@
     <!--CSS-->
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css">
     <link rel="stylesheet" type="text/css" href="dist/stylesheets/style.css">
+    <!--Call html5shiv for IE9 and an alt stylesheet for IE8 fallback-->
+    <!--if lt IE 9script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js")
+    -->
+    <!--if IE 8
+    link(rel="stylesheet", href="dist/stylesheets/ie8-and-down.css")
+    
+    -->
     <!--Fonts-->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Prata|Roboto+Condensed:400,700">
     <!--Facebook OpenGraph-->
@@ -38,11 +45,11 @@
     <meta name="twitter:domain" content="baltimoresun.com">
     <!--Omniture Code--><script>
 	((((window.trb || (window.trb = {})).data || (trb.data = {})).metrics || (trb.data.metrics = {})).thirdparty = {
-		pageName: 'bs:dataproject:news:maryland:education:unsettled-journeys-part-1:dataproject.',
-		channel: 'news:maryland:education',
+		pageName: 'bs:dataproject:news:maryland:crime:shoot-to-kill:dataproject.',
+		channel: 'news:maryland:crime',
 		server: 'data.baltimoresun.com',
-		hier1: 'baltimoresun:news:maryland:education',
-		hier2: 'news:maryland:education',
+		hier1: 'baltimoresun:news:maryland:crime',
+		hier2: 'news:maryland:crime',
 		prop1: 'D=pageName',
 		prop2: 'news',
 		prop38: 'dataproject',
@@ -92,19 +99,52 @@
     <link rel="prefetch" href="">
     <link rel="prefetch" href="">
   </head>
-  <body>
-    <!--script(src="http://www.baltimoresun.com/thirdpartyservice?disablessor=true")-->
-    <!--div(data-trb-thirdpartynav)-->
-    <div id="tophat">
-      <div class="group">
-        <div id="logo"><a href="http://www.baltimoresun.com"><img src="dist/images/baltimore-sun-logo-white.png"></a></div>
-        <ul>
-          <li class="chapter"><a href="#chapter-1"><span>Chapter 1</span></a></li>
-          <li class="chapter"><a href="#chapter-2"><span>Chapter 2</span></a></li>
-          <div class="tophat-share-tools"><span class="icon-facebook"></span><span class="icon-twitter"></span></div>
-        </ul>
-      </div>
+  <body onload="init();">
+    <div id="intro">
+      <canvas id="canvas" width="1000" height="600">
+        <p>Be sure to enable JavaScript and use an updated browser to experience this presentation<br /></p><img src="dist/images/s2k-logo.png">
+      </canvas>
+      <button id="open-button">READ STORY</button>
     </div>
+    <nav class="navbar navbar-fixed-top navbar-inverse" id="tophat">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#tophat-collapse" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <div id="logo"><a href="http://www.baltimoresun.com"><img src="dist/images/baltimore-sun-logo-white.png"></a></div>
+          <div class="tophat-share-tools"><span class="icon-facebook"></span><span class="icon-twitter"></span></div>
+        </div>
+        <div class="collapse navbar-collapse" id="tophat-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="chapter"><a href="#chapter-1"><span>Chapter 1</span></a></li>
+            <li class="chapter"><a href="#chapter-2"><span>Chapter 2</span></a></li>
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Series 
+                <div class="caret"></div></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Title of the second story</a></li>
+                <li><a href="#">Title of the third story</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--nav#tophat
+    .group
+    	#logo
+    		a(href="http://www.baltimoresun.com")
+    			img(src="dist/images/baltimore-sun-logo-white.png")
+    	ul
+    		li.chapter
+    			a(href="#chapter-1")
+    				span Chapter 1
+    		li.chapter
+    			a(href="#chapter-2")
+    				span Chapter 2
+    		.tophat-share-tools
+    			span.icon-facebook
+    			span.icon-twitter
+    
+    -->
     <!--block for story layout-->
     <section class="header">
       <!--.header__background-video
@@ -113,7 +153,7 @@
       	source(src="" type="video/webm")
       -->
       <div class="header__text">
-        <div class="container-story container-story--header">
+        <div class="container-story">
           <div class="header__title">
              <svg version="1.1"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
@@ -162,7 +202,7 @@
       </div>
     </section>
     <!--load photo gallery			-->
-    <section id="intro">
+    <section id="chapter-0">
       <div class="container-story container-story--article">
         <div class="article">
           <div class="article__byline">Justin George</div>
@@ -570,6 +610,22 @@
           <hr>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p class="reporter-email">Contact reporter at <a href="mailto:#" target="_blank"> reporter email </a></p>
+          <!--series menu for mobile-->
+          <figure class="inline-media inline-media--pullquote inline-media--big inline-media--has-title" data-sr>
+            <div class="inline-media__title">More in the series</div>
+            <ul class="parts-menu">
+              <!--Part 2-->
+              <li class="parts-menu__item parts-menu__item"><a href="#"><img class="parts-menu__thumbnail" src="dist/images/example.jpg" width="75">
+                  <div class="parts-menu__part-no">Part 2 <span class="parts-menu__date"> Date </span></div>
+                  <div class="parts-menu__title">Title</div></a></li>
+              <!--Part 2, inactive-->
+              <!--Part 3, inactive-->
+              <li class="parts-menu__item parts-menu__item"><a href="#"><img class="parts-menu__thumbnail" src="dist/images/example.jpg" width="75">
+                  <div class="parts-menu__part-no">Part 3 <span class="parts-menu__date"> Date </span></div>
+                  <div class="parts-menu__title">Title</div></a></li>
+              <!--Part 3, inactive-->
+            </ul>
+          </figure>
           <div class="subscribe">
             <h4><em>Support our narrative journalism</em></h4></br>	<em>Become a Baltimore Sun subscriber today to support stories like this one. <a href="http://ad.baltimoresun.com/land-subscribe-evergreen/member.html?int=bs_digitaladshouse_meter-member-center_content-promotion_ngux_button________" target="_blank">Start getting full access to our signature journalism for just 99 cents for the first four weeks.</a></em>
           </div>
@@ -641,7 +697,7 @@
 <div id="comments">
 	<h1> <span class="icon-comment"></span> Leave a comment </h1>
   <!--replace data-href with page url to enable facebook comments-->
-  <div class="fb-comments" data-href="#" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
+  <div class="fb-comments" data-href="http://data.baltimoresun.com/news/shoot-to-kill/" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
 </div>
     </section>
     <!-- Javascript-->
@@ -654,7 +710,9 @@
     <!--Load the rest-->
     <script src="https://use.typekit.net/nta3eyd.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
     <script src="dist/min/app.min.js"></script>
     <!--Configuration for scrollReveal.js-->
     <script>
@@ -665,6 +723,11 @@
        	vFactor: 0.5
       }
       window.sr = new scrollReveal(config);
+      
+      $('#open-button').click(function() {
+      $('#intro').toggleClass('close');
+      $('#open-button').hide();
+      });
     </script>
   </body>
 </html>

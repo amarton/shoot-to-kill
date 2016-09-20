@@ -7,7 +7,7 @@ block content
 					source(src="" type="video/mp4")
 					source(src="" type="video/webm")
 			.header__text
-				.container-story.container-story--header
+				.container-story
 					.header__title 
 						include ../dist/images/gun.svg 
 						span Shoot to 
@@ -19,12 +19,11 @@ block content
 		//load photo gallery			
 		//- include includes/_gallery.pug
 
-		section#intro
+		section#chapter-0
 			.container-story.container-story--article
 				.article
 					.article__byline Justin George
 					.article__dateline Date
-					
 
 					p.article__dropcap(data-dropcap="H")
 
@@ -191,8 +190,12 @@ block content
 
 
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				
+
 					p.reporter-email Contact reporter at <a href="mailto:#" target="_blank"> reporter email </a>
+					//series menu for mobile
+					figure.inline-media.inline-media--pullquote.inline-media--big.inline-media--has-title(data-sr)
+						.inline-media__title More in the series
+						include includes/_parts-menu.pug
 
 					.subscribe
 						 
