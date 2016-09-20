@@ -18,18 +18,28 @@
 				img(src="http://data.baltimoresun.com/jin/shoot-to-kill/images/4.png")
 			.cityOutline.cityOutline--5(data-city="5")
 				img(src="http://data.baltimoresun.com/jin/shoot-to-kill/images/5.png")
-			.cityOutline(data-city="5")
+			.cityOutline(data-city="0")
+				i.icon2-cw
 		.cityNameBlock
 			h3.cityName.jsFade Baltimore
 		.cityStats
 			.statList
 				h4 2015 statistics
-				p Non-fatal shootings: 
-					span.nonFatStat.jsFade 300
+				p.jsFade.dataDate Data current
 				p Fatal shootings: 
+					span.nonFatStat.jsFade 300
+				p  Non-fatal shootings: 
 					span.fatStat.jsFade 637
 				p Fatal / non-fatal ratio: 
 					span.ratioStat.jsFade 0.47
+					| , or
+				p.popStat
+					span 1 fatal
+					|  shooting to 
+				p.popStat
+					span.jsFade.ratioStatExp 2.1
+					span  non-fatal 
+					|  shootings
 			.graph
 				h4 Ratio over time
-				img.jsFade(src="http://data.baltimoresun.com/jin/shoot-to-kill/images/graph0.png")
+				img.jsFade(src="http://data.baltimoresun.com/jin/shoot-to-kill/images/graph0.png?1")

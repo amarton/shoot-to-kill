@@ -6,12 +6,12 @@ var stkGphx = {
 	touchX0: null,
 	touchX1: null,
 	cityNames: [
-		['Baltimore','300','637','0.47'],
-		['Milwaukee','59','300','0.20'],
-		['Chicago','360','1,726','0.21'],
-		['Los Angeles','164','802','0.20'],
-		['New York','234','1,138','0.21'],
-		['Washington, D.C.','123','299','0.41'],
+		['Baltimore','300','637','0.47','2.1','Data current'],
+		['Milwaukee','59','300','0.20','5.1','Data through 6/30/15'],
+		['Chicago','424','2,019','0.21','4.8','Data current'],
+		['Los Angeles','164','802','0.20','4.9','Data through 10/31/15'],
+		['New York','234','1,138','0.21','4.9','Data current'],
+		['Washington, D.C.','123','299','0.41','2.4','Data current'],
 	],
 	stats: [
 		['123','234','345','456'],
@@ -294,7 +294,9 @@ var stkGphx = {
 			$('.nonFatStat').text(stkGphx.cityNames[cityNum][1]);
 			$('.fatStat').text(stkGphx.cityNames[cityNum][2]);
 			$('.ratioStat').text(stkGphx.cityNames[cityNum][3]);
-			$('.graph img').attr('src','http://data.baltimoresun.com/jin/shoot-to-kill/images/graph' + cityNum + '.png');
+			$('.ratioStatExp').text(stkGphx.cityNames[cityNum][4]);
+			$('.dataDate').text(stkGphx.cityNames[cityNum][5]);
+			$('.graph img').attr('src','http://data.baltimoresun.com/jin/shoot-to-kill/images/graph' + cityNum + '.png?1');
 			$(this).fadeIn();
 		});
 		return false;

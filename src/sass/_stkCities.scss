@@ -45,7 +45,7 @@ $cubeSize: 12.5%; // Size of city outline divs
 		height: 25em;
 		padding-right: 20px;
 		@media(max-width: $bp5) {
-			height: 18em;
+			height: 22em;
 		}
 	}
 	.cityOutline {
@@ -70,6 +70,22 @@ $cubeSize: 12.5%; // Size of city outline divs
 			padding-bottom: $cubeSize * 4;
 			@media(max-width: $bp5) {
 				padding-bottom: 100%;
+			}
+		}
+		i {
+			font-size: 2.7em;
+			line-height: 2em;
+			color: $stkLightGray;
+			@include transition(all .5s ease);
+			&:hover {
+				font-size: 3em;
+				color: $offblack;
+			}
+			@media(max-width: $bp5) {
+				font-size: 2em;				
+				&:hover {
+					font-size: 2.3em;
+				}
 			}
 		}
 	}
@@ -115,6 +131,16 @@ $cubeSize: 12.5%; // Size of city outline divs
 			font-weight: 700;
 			font-size: 1.25em;
 			margin: 0.5em 0;
+			color: $offblack;
+			&.dataDate {
+				font-size: 1em;
+				line-height: 0;
+				margin-bottom: 1.5em;
+				color: $stkLightGray;
+			}
+			&:last-child {
+				line-height: 0;
+			}
 		}
 	}
 	.statList {
@@ -135,8 +161,7 @@ $cubeSize: 12.5%; // Size of city outline divs
 			display: none;
 		}
 		img {
-			width: auto;
-			max-height: 7.5em;
+			width: 100%;
 		}
 	}
 	h4 {
