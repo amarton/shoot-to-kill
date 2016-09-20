@@ -1,9 +1,6 @@
 /* Article Styles */
 
 .article
-	//position: relative
-	//z-index: 2
-
 	p
 		max-width: 800px
 		font:
@@ -47,11 +44,8 @@
 		margin-bottom: 40px
 
 	&__dropcap
-		//position: relative
 		
 		span
-			//position: relative
-			//z-index: 2
 			font:
 				family: $franklin
 				size: 2em
@@ -118,7 +112,6 @@
 				family: $franklin
 				size: 3.5em
 			color: $dark-red
-			//position: relative
 			@media (max-width: $size-phone1)
 				font-size: 2.3em
 
@@ -126,25 +119,30 @@
 
 
 .inline-media
-	//position: relative
 
 	&__title
-		position: absolute
-		bottom: 100%
-		left: 0
-		width: 100%
-		padding: 10px 0 15px 0
-		margin-bottom: 2px
-		text-align: center
-		text-transform: uppercase
-		color: $dark-grey
-		background-color: white
 		font:
 			family: $franklin
-			size: 18px
+			weight: 700
+		text-transform: uppercase
+		color: $dark-grey
 		+links($dark-grey, none)
 		a:hover
 			color: $dark-red
+
+		svg
+			height: 30px
+			width: 30px
+			padding-top: 10px
+			path
+				fill: $dark-red
+			@media (max-width: $size-phone1)
+				height: 25px
+				width: 25px
+				padding-top: 8px
+
+		&--red
+			color: $dark-red !important
 
 	&__source
 		font:
@@ -218,34 +216,11 @@
 
 	&--graphic
 		border-width: 0 0 5px 0
-		//img
-		//	display: block
-		//	width: 100%
-		//	height: auto
 
-		&__title
-			font:
-				family: $franklin
-				size: 2em
-				weight: 700
-			text-transform: uppercase
-			color: $dark-grey
+		h4 
+			font-size: 2em
 			@media (max-width: $size-phone1)
 				font-size: 1.5em
-
-			svg
-				height: 30px
-				width: 30px
-				padding-top: 10px
-				path
-					fill: $dark-red
-				@media (max-width: $size-phone1)
-					height: 25px
-					width: 25px
-					padding-top: 8px
-
-			&--red
-				color: $dark-red !important
 
 		&__chatter
 			font:
@@ -326,7 +301,6 @@
 		height: 0
 		padding-top: (450px * 0.5625)
 		background-color: black
-		//position: relative
 
 		@media (max-width: 1200px)
 			padding-top: 56.25%
@@ -350,7 +324,6 @@
 
 	&--timeline
 		float: right
-		//position: relative
 
 .media-package
 	+clearfix
