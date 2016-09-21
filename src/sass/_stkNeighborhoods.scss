@@ -32,6 +32,7 @@
 	.map {
 		height: 800px;
 		margin-top: 2em;
+		background: white;
 		@media(max-width: $bp6) {
 			display: none;
 		}

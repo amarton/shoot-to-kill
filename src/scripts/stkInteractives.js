@@ -53,7 +53,6 @@ var stkGphx = {
 		return false;
 	},
 	headshotScrollTo: function(pos) {
-		var slide = $('.slide');
 		var domStats = $('.statNum');
 		$('.center').removeClass('center');
 		for(var i = 0;i < 4;i++) {
@@ -206,7 +205,8 @@ var stkGphx = {
 			$('.ratioStat').text(stkGphx.cityNames[cityNum][3]);
 			$('.ratioStatExp').text(stkGphx.cityNames[cityNum][4]);
 			$('.dataDate').text(stkGphx.cityNames[cityNum][5]);
-			$('.graph img').attr('src','http://data.baltimoresun.com/jin/shoot-to-kill/images/graph' + cityNum + '.png?1');
+			$('.graph img').attr('src',
+				'http://data.baltimoresun.com/jin/shoot-to-kill/images/graph' + cityNum + '.png');
 			$(this).fadeIn();
 		});
 		return false;
@@ -214,26 +214,28 @@ var stkGphx = {
 	// neighborhoods creates the Carto map. There's not much to it -- basically just 
 	// boilerplate embed code {from Carto's website.
 	neighborhoods: function(){
-		cartodb.createVis('map', 
-			'https://baltsun.carto.com/api/v2/viz/798d62cc-6b9e-11e6-834a-0e05a8b3e3d7/viz.json', {
-			shareable: false,
-			title: false,
-			description: false,
-			draggable: false,
-			search: false,
-			tiles_loader: true,
-			infowindow: true,
-			center_lat: 39.264492,
-			center_lon: -76.612630,
-			zoom: 12
-		})
-		.done(function(vis, layers) {
-		  layers[1].setInteraction(true);
-		})
-		.error(function(err) {
-		  console.log(err);
+
+		var map = new L.Map('map', {
+			zoomControl: false,
+			dragging: false,
+			touchZoom: false,
+			scrollWheelZoom: false,
+			doubleClickZoom: false,
+			boxZoom: false,
+			tap: false,
+			center: [39.275, -76.620],
+			zoom: 12,
 		});
-	}	
+		map.dragging.disable();
+		cartodb.createLayer(map,
+			'https://baltsun.carto.com/api/v2/viz/798d62cc-6b9e-11e6-834a-0e05a8b3e3d7/viz.json')
+		.addTo(map)
+		.on('done', function(layer) {
+		})
+		.on('error', function() {
+			cartodb.log.log("some error occurred");
+		});
+	}
 };
 $(document).ready(function(){
 	stkGphx.init();
