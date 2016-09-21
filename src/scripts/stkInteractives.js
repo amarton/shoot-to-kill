@@ -6,12 +6,12 @@ var stkGphx = {
 	touchX0: null,
 	touchX1: null,
 	cityNames: [
-		['Baltimore','300','637','0.47','2.1','Data current'],
-		['Milwaukee','59','300','0.20','5.1','Data through 6/30/15'],
-		['Chicago','424','2,019','0.21','4.8','Data current'],
-		['Los Angeles','164','802','0.20','4.9','Data through 10/31/15'],
-		['New York','234','1,138','0.21','4.9','Data current'],
-		['Washington, D.C.','123','299','0.41','2.4','Data current'],
+		['Baltimore','300','637','3.1','Data current'],
+		['Milwaukee','59','300','6.1','Data through 6/30/15'],
+		['Charlotte','51','200','4.9','Data through 9/30/15'],
+		['Nashville','39','194','6.0','Data 9/18/15'],
+		['New York','234','1,138','5.9','Data current'],
+		['Washington, D.C.','123','299','3.4','Data current'],
 	],
 	stats: [
 			['262','268','221','344'],
@@ -202,9 +202,8 @@ var stkGphx = {
 			$('.cityName').text(stkGphx.cityNames[cityNum][0]);
 			$('.nonFatStat').text(stkGphx.cityNames[cityNum][1]);
 			$('.fatStat').text(stkGphx.cityNames[cityNum][2]);
-			$('.ratioStat').text(stkGphx.cityNames[cityNum][3]);
-			$('.ratioStatExp').text(stkGphx.cityNames[cityNum][4]);
-			$('.dataDate').text(stkGphx.cityNames[cityNum][5]);
+			$('.perShot').text(stkGphx.cityNames[cityNum][3]);
+			$('.dataDate').text(stkGphx.cityNames[cityNum][4]);
 			$('.graph img').attr('src',
 				'http://data.baltimoresun.com/jin/shoot-to-kill/images/graph' + cityNum + '.png');
 			$(this).fadeIn();
@@ -214,7 +213,6 @@ var stkGphx = {
 	// neighborhoods creates the Carto map. There's not much to it -- basically just 
 	// boilerplate embed code {from Carto's website.
 	neighborhoods: function(){
-
 		var map = new L.Map('map', {
 			zoomControl: false,
 			dragging: false,

@@ -59,6 +59,7 @@ $cubeSize: 12.5%; // Size of city outline divs
 		}
 		img {
 			width: 90%;
+			padding: 10px;
 			opacity: .2;
 			@include transition(all 0.5s ease);
 			&:hover {
@@ -137,9 +138,6 @@ $cubeSize: 12.5%; // Size of city outline divs
 				line-height: 0;
 				margin-bottom: 1.5em;
 				color: $stkLightGray;
-			}
-			&:last-child {
-				line-height: 0;
 			}
 		}
 	}
