@@ -15,8 +15,9 @@
 	#intro {
 		  //position: absolute;
 		  width: 100%;
-		  height: 600px;
-		  max-height: 100vh;
+		  height: 100vh;
+		  //height: 600px;
+		  //max-height: 100vh;
 		  //top: 0;
 		  //overflow: hidden;
 		  background-color: #000;
@@ -34,8 +35,9 @@
 	}	
 
 	  #intro.close {
-	    top: 0vh;
-	    height: 0; 
+	    //top: 0vh;
+	    //height: 0;
+	    height: 600px; 
 	}
 
 	#open-button {
@@ -63,10 +65,4 @@
 	#open-button:hover {
 		  background-color: #d2232a;
 		  color:#fff;
-		}
-
-	#delete-dummy {
-		max-width:800px;
-		font-size:2em;
-		margin:0 auto;
 		}
