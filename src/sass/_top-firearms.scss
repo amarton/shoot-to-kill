@@ -16,6 +16,9 @@
 		 @media only screen and (max-width: 950px) {
 	 		.gunname  {font-size: 1.5em;}
 		 }
+		  @media only screen and (max-width: 500px) {
+	 		.gunname  {font-size: 1em;}
+		 }
 	.block img {
 		max-width:200px; width:95%;
 	}
@@ -34,6 +37,12 @@
 }
 
 	p.gunstats {
-	font-family: "franklin-gothic-urw",sans-serif;
-	line-height:100%;
+		font-family: "franklin-gothic-urw",sans-serif;
+		line-height:.75;
 	}
+	 @media only screen and (max-width: 500px) {
+	 		p.gunstats {
+	 		font-size: .75em;
+	 		line-height:.5;
+	 		}
+		 }
