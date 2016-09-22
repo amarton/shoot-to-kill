@@ -1,8 +1,3 @@
-	html, body {
-    		height: 100%;
-    		margin: 0;
-    	}
-
 	#canvas, #_preload_div_ {
 		position:absolute;
 		margin:auto;
@@ -39,7 +34,11 @@
 	    //height: 0;
 	    height: 600px; 
 	}
-
+	@media screen and (max-height: $size-laptop) {
+		#intro.close {
+			height: 250px;
+		}
+	}
 	#open-button {
 		  position: relative;
 		  height:50px;
