@@ -226,7 +226,7 @@ var stkGphx = {
 		});
 		map.dragging.disable();
 		cartodb.createLayer(map,
-			'https://baltsun.carto.com/api/v2/viz/798d62cc-6b9e-11e6-834a-0e05a8b3e3d7/viz.json')
+			'https://baltsun.carto.com/api/v2/viz/6679b36e-80ea-11e6-b5c2-0e3ebc282e83/viz.json')
 		.addTo(map)
 		.on('done', function(layer) {
 		})
