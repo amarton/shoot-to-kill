@@ -203,9 +203,8 @@ var stkGphx = {
 			$('.nonFatStat').text(stkGphx.cityNames[cityNum][1]);
 			$('.fatStat').text(stkGphx.cityNames[cityNum][2]);
 			$('.perShot').text(stkGphx.cityNames[cityNum][3]);
-			$('.dataDate').text(stkGphx.cityNames[cityNum][4]);
 			$('.cityGraph').attr('src',
-				'dist/images/graph' + stkGphx.cityNames[cityNum][5] + '.png');
+				'dist/images/graph' + stkGphx.cityNames[cityNum][4] + '.png');
 			$(this).fadeIn();
 		});
 		return false;
