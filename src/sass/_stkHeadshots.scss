@@ -179,4 +179,19 @@
 			cursor: default;
 		}
 	}
+	.sourceDiv {
+		position: relative;
+		bottom: -10%;
+		width: 100%;
+		margin: 0 auto;
+		max-width: 800px;
+		@media(max-width: $bp5){
+			bottom: 0;
+		}
+	}
+	.source {
+		margin: 0 auto;
+		color: $stkLightGray;
+		text-align: right;
+	}
 }

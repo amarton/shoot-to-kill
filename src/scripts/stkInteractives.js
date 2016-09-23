@@ -6,12 +6,12 @@ var stkGphx = {
 	touchX0: null,
 	touchX1: null,
 	cityNames: [
-		['Baltimore','300','637','3.1','Data current','Baltimore'],
-		['Milwaukee','59','300','6.1','Data through 6/30/15','Milwaukee'],
-		['Charlotte','51','200','4.9','Data through 9/30/15','Charlotte'],
-		['Nashville','39','194','6.0','Data 9/18/15','Nashville'],
-		['New York','234','1,138','5.9','Data current','NewYork'],
-		['Washington, D.C.','123','299','3.4','Data current','DC']
+		['Baltimore','300','637','3.1','Baltimore'],
+		['Milwaukee','118','634','6.4','Milwaukee'],
+		['Charlotte','51','293','6.7','Charlotte'],
+		['Nashville','61','209','4.4','Nashville'],
+		['New York','216','921','5.3','NewYork'],
+		['Washington, D.C.','123','299','3.4','DC']
 	],
 	stats: [
 			['262','268','221','344'],
