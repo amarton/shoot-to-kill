@@ -152,6 +152,7 @@ $cubeSize: 12.5%; // Size of city outline divs
 		}
 	}
 	.graph {
+		position: relative;
 		width: 48%;
 		float: right;
 		text-align: left;
@@ -160,6 +161,16 @@ $cubeSize: 12.5%; // Size of city outline divs
 		}
 		img {
 			width: 100%;
+		}
+		.cityGraph {
+			position: relative;
+			z-index: 1;
+		}
+		.baseGraph {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			z-index: 0;
 		}
 	}
 	h4 {

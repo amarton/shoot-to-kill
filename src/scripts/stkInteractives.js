@@ -6,12 +6,12 @@ var stkGphx = {
 	touchX0: null,
 	touchX1: null,
 	cityNames: [
-		['Baltimore','300','637','3.1','Data current'],
-		['Milwaukee','59','300','6.1','Data through 6/30/15'],
-		['Charlotte','51','200','4.9','Data through 9/30/15'],
-		['Nashville','39','194','6.0','Data 9/18/15'],
-		['New York','234','1,138','5.9','Data current'],
-		['Washington, D.C.','123','299','3.4','Data current'],
+		['Baltimore','300','637','3.1','Data current','Baltimore'],
+		['Milwaukee','59','300','6.1','Data through 6/30/15','Milwaukee'],
+		['Charlotte','51','200','4.9','Data through 9/30/15','Charlotte'],
+		['Nashville','39','194','6.0','Data 9/18/15','Nashville'],
+		['New York','234','1,138','5.9','Data current','NewYork'],
+		['Washington, D.C.','123','299','3.4','Data current','DC']
 	],
 	stats: [
 			['262','268','221','344'],
@@ -204,8 +204,8 @@ var stkGphx = {
 			$('.fatStat').text(stkGphx.cityNames[cityNum][2]);
 			$('.perShot').text(stkGphx.cityNames[cityNum][3]);
 			$('.dataDate').text(stkGphx.cityNames[cityNum][4]);
-			$('.graph img').attr('src',
-				'http://data.baltimoresun.com/jin/shoot-to-kill/images/graph' + cityNum + '.png');
+			$('.cityGraph').attr('src',
+				'dist/images/graph' + stkGphx.cityNames[cityNum][5] + '.png');
 			$(this).fadeIn();
 		});
 		return false;
