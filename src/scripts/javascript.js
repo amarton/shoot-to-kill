@@ -36,7 +36,7 @@ var app = app || {
 
 		$(".icon-twitter").on("click", function(){
 
-			var tweet = "Baltimore is one of the most lethal ctites in the United States. How did we get there?"; //Tweet text
+			var tweet = "Baltimore is one of the most lethal cities in the United States. How did we get there?"; //Tweet text
 			var url = "http://data.baltimoresun.com/news/shoot-to-kill/"; //Interactive URL
 
 			var twitter_url = "https://twitter.com/intent/tweet?text="+tweet+"&url="+url+"&tw_p=tweetbutton";
@@ -48,7 +48,7 @@ var app = app || {
 
 			var picture = ""; //Picture URL
 			var title = "Shoot to Kill"; //Post title
-			var description = "Baltimore is one of the most lethal ctites in the United States. How did we get there?"; //Post description
+			var description = "Baltimore is one of the most lethal cities in the United States. How did we get there?"; //Post description
 			var url = "http://data.baltimoresun.com/news/shoot-to-kill/"; //Interactive URL
 
 	    	var facebook_url = "https://www.facebook.com/dialog/feed?display=popup&app_id=310302989040998&link="+url+"&picture="+picture+"&name="+title+"&description="+description+"&redirect_uri=http://www.facebook.com";    		

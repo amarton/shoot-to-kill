@@ -31,6 +31,9 @@ html(class="no-js", lang="en")
 
 		//Fonts
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Prata|Roboto+Condensed:400,700")
+		
+		noscript
+			link(rel="stylesheet", href="dist/stylesheets/ie8-and-down.css")
 
 		//Facebook OpenGraph
 		meta(property="og:title", content="")
@@ -62,7 +65,7 @@ html(class="no-js", lang="en")
 	body(onload="init();")
 		div#intro
 			canvas(id="canvas", width="1000", height="600")
-				p Be sure to enable JavaScript and use an updated browser to experience this presentation<br />
+				p Please enable JavaScript and use a modern browser to fully experience this presentation. If JavaScript is disabled, scroll down to begin.<br />
 				img(src="dist/images/s2k-logo.png")
 			div#_preload_div_(style="display: inline-block; height:100px; width: 100px; margin-top:100px;position:absolute;text-align: center;")
 				span(style="display: inline-block; height: 100%; vertical-align: middle;")
