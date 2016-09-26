@@ -4651,10 +4651,14 @@ p.nominalBounds = new cjs.Rectangle(0,0,280.9,22.7);
 
 	// bg
 	this.shape_43 = new cjs.Shape();
-	this.shape_43.graphics.f("#050304").s().p("EhOHAnEMAAAhOHMCcQAAAMAAABOHg");
-	this.shape_43.setTransform(507.6,304.8,1.032,1.3,0,-0.5,0);
+	this.shape_43.graphics.f("#000000").s().p("EhQNAyyMgA1hljMChQAAAMAA1Bljg");
+	this.shape_43.setTransform(507.6,304.8);
 
-	this.timeline.addTween(cjs.Tween.get(this.shape_43).wait(1559).to({scaleX:1,scaleY:1,skewX:0,x:500.2,y:250},0).wait(1));
+	this.shape_44 = new cjs.Shape();
+	this.shape_44.graphics.f("#050304").s().p("EhOHAnEMAAAhOHMCcQAAAMAAABOHg");
+	this.shape_44.setTransform(500.2,250);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_43}]}).to({state:[{t:this.shape_44}]},1559).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(488.9,279.8,1037.4,650.1);
