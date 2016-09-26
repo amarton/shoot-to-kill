@@ -22,10 +22,9 @@
     <!--Call html5shiv for IE9 and an alt stylesheet for IE8 fallback-->
     <!--if lt IE 9script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js")
     -->
-    <!--if IE 8
-    link(rel="stylesheet", href="dist/stylesheets/ie8-and-down.css")
-    
-    -->
+    	<!--[if lte IE 8]>
+    		<link rel="stylesheet" type="text/css" href="dist/stylesheets/ie8-and-down.css" />
+    	<![endif]-->
     <!--Fonts-->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Prata|Roboto+Condensed:400,700">
     <noscript>
@@ -48,24 +47,24 @@
     <meta name="twitter:domain" content="baltimoresun.com">
     <!--Omniture Code--><script>
 	((((window.trb || (window.trb = {})).data || (trb.data = {})).metrics || (trb.data.metrics = {})).thirdparty = {
-		pageName: 'bs:dataproject:news:maryland:crime:shoot-to-kill:dataproject.',
-		channel: 'news:maryland:crime',
-		server: 'data.baltimoresun.com',
-		hier1: 'baltimoresun:news:maryland:crime',
-		hier2: 'news:maryland:crime',
-		prop1: 'D=pageName',
-		prop2: 'news',
-		prop38: 'dataproject',
-		prop57: 'D=c38',
-		eVar20: 'baltimoresun',
-		eVar21: 'D=c38',
-		eVar34: 'D=ch',
-		eVar35: 'D=pageName',
-		events:''
+	pageName: 'bs:data:news:maryland:shoot-to-kill:dataproject.',
+	channel: 'news:maryland',
+	server: 'data.baltimoresun.com',
+	hier1: 'baltimoresun:news:maryland',
+	hier2: 'news:maryland',
+	prop1: 'D=pageName',
+	prop2: 'news',
+	prop38: 'dataproject',
+	prop57: 'D=c38',
+	eVar20: 'baltimoresun',
+	eVar21: 'D=c38',
+	eVar34: 'D=ch',
+	eVar35: 'D=pageName',
+	events:''
+
 	});  
 </script>
 
-<script src="http://www.baltimoresun.com/thirdpartyservice?disablenav=true&disablessor=true" async></script>
     <!--BS Ad Code--><!-- Start: GPT Async -->
 <script type='text/javascript'>
   var gptadslots=[];
@@ -105,6 +104,8 @@
     <link rel="prefetch" href="">
   </head>
   <body onload="init();">
+    <script src="http://www.baltimoresun.com/thirdpartyservice?disablenav=true&amp;disablessor=true" async></script>
+    <div data-trb-thirdpartynav></div>
     <div id="intro">
       <canvas id="canvas" width="1000" height="600">
         <p>Please enable JavaScript and use a modern browser to fully experience this presentation. If JavaScript is disabled, scroll down to begin.<br /></p><img src="dist/images/s2k-logo.png">

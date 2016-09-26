@@ -26,8 +26,9 @@ html(class="no-js", lang="en")
 		//Call html5shiv for IE9 and an alt stylesheet for IE8 fallback
 		//if lt IE 9
 			script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js")
-		//if IE 8
-			link(rel="stylesheet", href="dist/stylesheets/ie8-and-down.css")
+		|	<!--[if lte IE 8]>
+		|		<link rel="stylesheet" type="text/css" href="dist/stylesheets/ie8-and-down.css" />
+		|	<![endif]-->
 
 		//Fonts
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Prata|Roboto+Condensed:400,700")
@@ -63,6 +64,8 @@ html(class="no-js", lang="en")
 			link(rel="prefetch" href="")
 
 	body(onload="init();")
+		script(src="http://www.baltimoresun.com/thirdpartyservice?disablenav=true&disablessor=true", async)
+		div(data-trb-thirdpartynav)
 		div#intro
 			canvas(id="canvas", width="1000", height="600")
 				p Please enable JavaScript and use a modern browser to fully experience this presentation. If JavaScript is disabled, scroll down to begin.<br />
