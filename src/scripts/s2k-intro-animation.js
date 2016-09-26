@@ -1752,16 +1752,16 @@ p.nominalBounds = new cjs.Rectangle(0,0,98.4,28.8);
 	this.shape_1.setTransform(42.6,42.5,1.723,1.723);
 
 	this.shape_2 = new cjs.Shape();
-	this.shape_2.graphics.f("#FFFFFF").s().p("AgfBuQACgUAGgUQAGgTALgUIAQgfQAZgsALgkIhbAAIgHAhIgHAAIAAg+IB3AAQgGAngFAVQgKAfgIAUQgIAYgJAdQgHAdgDAag");
-	this.shape_2.setTransform(54.1,42);
+	this.shape_2.graphics.f("#FFFFFF").s().p("AgiBrQgPgJgJgQQgHgQgEgVQgEgWAAgZQAAgbAFgWQAGgUALgPQAVgdAkAAQANAAALAEQALACAIAFQASALAAAQQAAAKgGAGQgGAGgIABQgJgBgEgEQgFgEAAgHQAHgHAAgJQAAgJgIgHQgEgDgGgCQgFgCgHAAQgVAAgMATQgMASAAAkIAAAfQARgUAbgBQAeAAATATQAKAHAFAOQAFANAAAQQAAAigWATQgLAKgNAEQgNAGgPgBQgUAAgOgIgAgJgRIgMAGQgMAHgGALIAAAmIAAABQAAA/AnAAQATAAALgNQAFgIADgJQACgKAAgNIAAgbQAAgXgJgMQgFgHgHgDQgHgDgKAAQgFAAgGACg");
+	this.shape_2.setTransform(53.9,42);
 
 	this.shape_3 = new cjs.Shape();
-	this.shape_3.graphics.f("#FFFFFF").s().p("AgwBgIBTi/IAPAAIhVC/g");
-	this.shape_3.setTransform(40.8,43.3);
+	this.shape_3.graphics.f("#FFFFFF").s().p("AgxBgIBUi/IAOAAIhTC/g");
+	this.shape_3.setTransform(38.8,43.3);
 
 	this.shape_4 = new cjs.Shape();
-	this.shape_4.graphics.f("#FFFFFF").s().p("AgfBuIAAgFIATgDIAAjKIgTgDIAAgGIAtAAIAADTIATADIAAAFg");
-	this.shape_4.setTransform(30.4,42);
+	this.shape_4.graphics.f("#FFFFFF").s().p("AgfBuIAAgFIATgDIAAjKIgTgDIAAgGIAsAAIAADTIATADIAAAFg");
+	this.shape_4.setTransform(28.3,42);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_4},{t:this.shape_3},{t:this.shape_2},{t:this.shape_1},{t:this.shape}]}).wait(1));
 
@@ -2896,48 +2896,44 @@ p.nominalBounds = new cjs.Rectangle(-1.5,-1.5,10.5,10.5);
 	// Layer 1
 	this.instance = new lib.personblue();
 	this.instance.parent = this;
-	this.instance.setTransform(188.6,47.3,1.176,1.176);
+	this.instance.setTransform(172.6,47.3,1.176,1.176);
 
 	this.instance_1 = new lib.person();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(177.7,61,0.188,0.188,0,0,0,33.1,70.9);
+	this.instance_1.setTransform(160.5,61,0.188,0.188,0,0,0,33.1,70.9);
 
 	this.instance_2 = new lib.person();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(160.5,61,0.188,0.188,0,0,0,33.1,70.9);
+	this.instance_2.setTransform(143.6,61,0.188,0.188,0,0,0,33.1,70.9);
 
 	this.instance_3 = new lib.person();
 	this.instance_3.parent = this;
-	this.instance_3.setTransform(143.6,61,0.188,0.188,0,0,0,33.1,70.9);
+	this.instance_3.setTransform(126.6,61,0.188,0.188,0,0,0,33.1,70.9);
 
 	this.instance_4 = new lib.person();
 	this.instance_4.parent = this;
-	this.instance_4.setTransform(126.6,61,0.188,0.188,0,0,0,33.1,70.9);
+	this.instance_4.setTransform(109.6,61,0.188,0.188,0,0,0,33.1,70.9);
 
 	this.instance_5 = new lib.person();
 	this.instance_5.parent = this;
-	this.instance_5.setTransform(109.6,61,0.188,0.188,0,0,0,33.1,70.9);
+	this.instance_5.setTransform(92.5,61,0.188,0.188,0,0,0,33.1,70.9);
 
-	this.instance_6 = new lib.person();
+	this.instance_6 = new lib.chitext();
 	this.instance_6.parent = this;
-	this.instance_6.setTransform(92.5,61,0.188,0.188,0,0,0,33.1,70.9);
+	this.instance_6.setTransform(134.3,28,1,1,0,0,0,49.2,14.3);
 
-	this.instance_7 = new lib.chitext();
+	this.instance_7 = new lib.chidonut();
 	this.instance_7.parent = this;
-	this.instance_7.setTransform(134.3,28,1,1,0,0,0,49.2,14.3);
-
-	this.instance_8 = new lib.chidonut();
-	this.instance_8.parent = this;
-	this.instance_8.setTransform(42.6,42.5,1,1,0,0,0,42.6,42.5);
+	this.instance_7.setTransform(42.6,42.5,1,1,0,0,0,42.6,42.5);
 
 	this.shape = new cjs.Shape();
 	this.shape.graphics.f().s("#FFFFFF").ss(0.5).p("ArTAAIWnAA");
-	this.shape.setTransform(130,75.8);
+	this.shape.setTransform(126.6,75.8,0.842,1);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.instance_8},{t:this.instance_7},{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.instance_7},{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,203.5,85.1);
+p.nominalBounds = new cjs.Rectangle(0,0,188.5,85.1);
 
 
 (lib._2015textuse = function(mode,startPosition,loop) {
