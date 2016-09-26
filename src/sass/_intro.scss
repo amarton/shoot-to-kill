@@ -34,7 +34,12 @@
 	    //height: 0;
 	    height: 600px; 
 	}
-	@media screen and (max-height: $size-laptop) {
+	@media screen and (max-width: 625px) {
+		#intro.close {
+			height: 350px;
+		}
+	}
+	@media screen and (max-width: 450px) {
 		#intro.close {
 			height: 250px;
 		}
