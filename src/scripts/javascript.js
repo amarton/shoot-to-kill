@@ -46,7 +46,7 @@ var app = app || {
 
 		$(".icon-facebook").on("click", function(){
 
-			var picture = ""; //Picture URL
+			var picture = "http://data.baltimoresun.com/news/shoot-to-kill/dist/images/social-thumb.png"; //Picture URL
 			var title = "Shoot to Kill"; //Post title
 			var description = "Baltimore is one of the most lethal cities in the United States. How did we get there?"; //Post description
 			var url = "http://data.baltimoresun.com/news/shoot-to-kill/"; //Interactive URL
