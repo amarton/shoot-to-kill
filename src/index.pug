@@ -304,16 +304,32 @@ block content
  
 
 					p.reporter-email Contact reporter at <a href="mailto:#" target="_blank"> reporter email </a>
+
+					.inline-media.inline-media--big.about
+						h3 About this series
+						div Here is some placeholder text. This text will eventually explain how this story was reported and funded.
+						img(src="dist/images/fellowship.jpg" height="50px" width="auto" style="display:block; margin: 0 auto;")
+						
 					//series menu for mobile
 					figure.inline-media.inline-media--big.inline-media--has-title(data-sr)
 						include includes/_parts-menu.pug
 
-					.subscribe
+					.inline-media.inline-media--big.subscribe
 						 
 						h3
 							em Support our narrative journalism
 						</br>	
 						em Become a Baltimore Sun subscriber today to support stories like this one. <a href="http://ad.baltimoresun.com/land-subscribe-evergreen/member.html?int=bs_digitaladshouse_meter-member-center_content-promotion_ngux_button________" target="_blank">Start getting full access to our signature journalism for just 99 cents for the first four weeks.</a>
+
+					.inline-media.inline-media--big.newsletter
+						p 
+							b Sign up for our crime newsletter to recieve more stories like this:
+						form.form-inline
+							.form-group 
+								input(type="text" class="form-control" name="email" placeholder="Enter your email" value)
+								button.btn.btn-default Submit
+
+
 
 					//ad
 					include includes/ads/ad-for-body--leaderboard.html

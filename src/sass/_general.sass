@@ -70,7 +70,7 @@ html
 	height: auto
 
 .ad--leaderboard
-	margin: 0 10% 10px 10%
+	margin: 20px 10% 10px 10%
 	width: 800px
 	@media (max-width: $size-tablet)
 		display: none
@@ -90,17 +90,30 @@ html
 			width: auto
 			padding: 0 10px
 
+.about
+	h3
+		text-transform: uppercase
+		font:
+			family: $franklin
+		color: $dark-red
+	.center
+		margin: 0 auto
+	
+
 .subscribe
 	background-color: #eee
 	padding: 2%
-	max-width: 800px
-	margin: 10px 10% 50px 10%
 	+links(#bb0a1e, underline)
-	@media (max-width: $no-rail)
-		margin: 0 auto 25px auto
 
 	h3
 		margin: 0
+
+.newsletter
+	margin-top: 20px !important
+
+	form
+		max-width: 800px
+		margin: 0 10% 0 10%
 
 #comments
 	max-width: 1000px
