@@ -4962,8 +4962,9 @@ html {
   .article__chapter-title__text {
     display: inline-block;
     font-family: "franklin-gothic-urw", sans-serif;
-    font-size: 3.5em;
-    color: #bb0a1e; }
+    font-size: 3.1em;
+    color: #bb0a1e;
+    text-transform: uppercase; }
     @media (max-width: 515px) {
       .article__chapter-title__text {
         font-size: 2.3em; } }
@@ -5429,7 +5430,7 @@ html {
         line-height: 0;
         margin-bottom: 1.5em;
         color: #888888; }
-      .stkCities .cityStats p.disclaimer {
+      .stkCities .cityStats p.cityDisclaimer {
         margin: 20px auto;
         font-size: .9em;
         font-weight: 700;
