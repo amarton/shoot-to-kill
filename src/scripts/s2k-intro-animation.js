@@ -4661,7 +4661,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,280.9,22.7);
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_43}]}).to({state:[{t:this.shape_44}]},1559).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(488.9,279.8,1037.4,650.1);
+p.nominalBounds = new cjs.Rectangle(488.9,279.8,1000,1037.4,650.1);
 
 })(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{});
 var lib, images, createjs, ss;
