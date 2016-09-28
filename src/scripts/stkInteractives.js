@@ -6,12 +6,12 @@ var stkGphx = {
 	touchX0: null,
 	touchX1: null,
 	cityNames: [
-		['Baltimore','300','637','3.1','Baltimore'],
-		['Milwaukee','118','634','6.4','Milwaukee'],
-		['Charlotte','51','293','6.7','Charlotte'],
-		['Nashville','61','209','4.4','Nashville'],
-		['New York','216','921','5.3','NewYork'],
-		['Washington, D.C.','123','299','3.4','DC']
+		['Baltimore','300','637','3.1','Baltimore',''],
+		['Milwaukee','118','634','6.4','Milwaukee',''],
+		['Charlotte','51','293','6.7','Charlotte',''],
+		['Nashville','61','209','4.4','Nashville',''],
+		['New York','216','921','5.3','NewYork',''],
+		['D.C.','123','299*','3.4','DC','*Washington, D.C., counts non-fatal shootings as any time a person is shot at; the other cities count when victims are struck by gunfire.']
 	],
 	stats: [
 			['262','268','221','344'],
@@ -205,6 +205,7 @@ var stkGphx = {
 			$('.perShot').text(stkGphx.cityNames[cityNum][3]);
 			$('.cityGraph').attr('src',
 				'dist/images/graph' + stkGphx.cityNames[cityNum][4] + '.png');
+			$('.disclaimer').text(stkGphx.cityNames[cityNum][5]);
 			$(this).fadeIn();
 		});
 		return false;
