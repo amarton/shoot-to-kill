@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pug": "pug  -P -p src/index.pug < src/index.pug > index.html",
-    "sass": "node-sass --output-style compressed -o dist/stylesheets src/sass",
+    "sass": "node-sass --output-style -o dist/stylesheets src/sass",
     "uglify": "uglifyjs src/scripts/*.js -m -o dist/min/app.js && uglifyjs src/scripts/*.js -m -c -o dist/min/app.min.js",
     "build:all": "npm run pug && npm run sass && npm run uglify",
     "watch:css": "onchange 'src/sass/*.sass' -- npm run sass",
