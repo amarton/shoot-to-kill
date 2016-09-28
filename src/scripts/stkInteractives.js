@@ -205,7 +205,7 @@ var stkGphx = {
 			$('.perShot').text(stkGphx.cityNames[cityNum][3]);
 			$('.cityGraph').attr('src',
 				'dist/images/graph' + stkGphx.cityNames[cityNum][4] + '.png');
-			$('.disclaimer').text(stkGphx.cityNames[cityNum][5]);
+			$('.cityDisclaimer').text(stkGphx.cityNames[cityNum][5]);
 			$(this).fadeIn();
 		});
 		return false;
