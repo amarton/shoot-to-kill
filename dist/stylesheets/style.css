@@ -411,12 +411,6 @@ th {
 .icon-close:before {
   content: "\e117"; }
 
-/*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 audio, canvas, progress, video {
   display: inline-block;
   vertical-align: baseline; }
@@ -5712,9 +5706,9 @@ html {
 
 p.gunstats {
   font-family: "franklin-gothic-urw",sans-serif;
-  line-height: .75; }
+  line-height: 1; }
 
 @media only screen and (max-width: 500px) {
   p.gunstats {
-    font-size: .75em;
+    font-size: 1em;
     line-height: 1 !important; } }
