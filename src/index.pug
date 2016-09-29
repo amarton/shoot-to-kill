@@ -534,15 +534,15 @@ block content
 					p.reporter-email Contact reporter at <a href="mailto:#" target="_blank"> reporter email </a>
 
 					//series menu for mobile
-					figure.inline-media.inline-media--big.inline-media--has-title(data-sr)
+					//figure.inline-media.inline-media--big.inline-media--has-title(data-sr)
 						include includes/_parts-menu.pug
 
 					.inline-media.inline-media--big.newsletter
-								b Sign up for our crime newsletter to recieve more stories like this:
-								form.form-inline
-									.form-group 
-										input(type="text" class="form-control" name="email" placeholder="Enter your email" value)
-										button.btn.btn-default Submit
+								b Sign up for our Crime & Courts newsletter to recieve more stories like this:
+								iframe(src='http://data.baltimoresun.com/mobile/form.html' style='border:0' height="37")
+								div
+									small
+										a(href="http://www.tronc.com/privacy-policy/") Privacy Policy
 
 					//ad
 					include includes/ads/ad-for-body--leaderboard.html

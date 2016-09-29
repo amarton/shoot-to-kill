@@ -127,13 +127,16 @@
             <li class="chapter"><a href="#chapter-3"><span>Chapter 3</span></a></li>
             <li class="chapter"><a href="#chapter-4"><span>Chapter 4</span></a></li>
             <li class="chapter"><a href="#chapter-5"><span>Chapter 5</span></a></li>
-            <li class="dropdown chapter"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Series 
-                <div class="caret"></div></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Title of the second story</a></li>
-                <li><a href="#">Title of the third story</a></li>
-              </ul>
-            </li>
+            <!--li.dropdown.chapter
+            a(href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Series 
+            	div.caret
+            ul.dropdown-menu
+            	li
+            		a(href="#") Title of the second story
+            	li
+            		a(href="#") Title of the third story
+            
+            -->
           </ul>
         </div>
       </div>
@@ -531,13 +534,13 @@
                     <p>Non-fatal shootings: <span class="fatStat jsFade">637</span></p>
                     <p>
                        For every <span class="jsFade perShot">3.1</span> people shot, <br><span>one dies.</span></p>
-                    <p class="jsFade cityDisclaimer"></p>
+                    <p class="jsFade cityDisclaimer">Source: Baltimore Police Department</p>
                   </div>
                   <div class="graph">
                     <h4>% fatal shootings</h4><img class="jsFade cityGraph" src="dist/images/graphBaltimore.png"><img class="baseGraph" src="dist/images/graphBase.png">
                   </div>
                 </div>
-                <p class="source">Source: Various police departments, staff reports</p>
+                <p class="source">*Washington, D.C., counts non-fatal shootings as any time a person is shot at; the other cities count when victims are struck by gunfire.</p>
               </div>
             </div>
           </figure>
@@ -1115,28 +1118,13 @@
           <p>They prayed for the people of Baltimore and they prayed for their sons and daughters in the hearses — the children they had left.</p>
           <p class="reporter-email">Contact reporter at <a href="mailto:#" target="_blank"> reporter email </a></p>
           <!--series menu for mobile-->
-          <figure class="inline-media inline-media--big inline-media--has-title" data-sr>
-            <ul class="parts-menu">
-              <h4 class="inline-media__title">More in the series</h4>
-              <!--Part 2-->
-              <li class="parts-menu__item parts-menu__item"><a href="#"><img class="parts-menu__thumbnail" src="dist/images/example.jpg" width="75">
-                  <div class="parts-menu__part-no">Part 2 <span class="parts-menu__date"> Date </span></div>
-                  <div class="parts-menu__title">Title</div></a></li>
-              <!--Part 2, inactive-->
-              <!--Part 3, inactive-->
-              <li class="parts-menu__item parts-menu__item"><a href="#"><img class="parts-menu__thumbnail" src="dist/images/example.jpg" width="75">
-                  <div class="parts-menu__part-no">Part 3 <span class="parts-menu__date"> Date </span></div>
-                  <div class="parts-menu__title">Title</div></a></li>
-              <!--Part 3, inactive-->
-            </ul>
-          </figure>
-          <div class="inline-media inline-media--big newsletter"><b>Sign up for our crime newsletter to recieve more stories like this:</b>
-            <form class="form-inline">
-              <div class="form-group"> 
-                <input class="form-control" type="text" name="email" placeholder="Enter your email" value>
-                <button class="btn btn-default">Submit</button>
-              </div>
-            </form>
+          <!--figure.inline-media.inline-media--big.inline-media--has-title(data-sr)
+          include includes/_parts-menu.pug
+          
+          -->
+          <div class="inline-media inline-media--big newsletter"><b>Sign up for our Crime & Courts newsletter to recieve more stories like this:</b>
+            <iframe src="http://data.baltimoresun.com/mobile/form.html" style="border:0" height="37"></iframe>
+            <div><small><a href="http://www.tronc.com/privacy-policy/">Privacy Policy</a></small></div>
           </div>
           <!--ad--><div class="ad ad--leaderboard">
 

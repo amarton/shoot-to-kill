@@ -4449,6 +4449,9 @@ html {
   margin-top: 20px !important;
   text-align: center;
   line-height: 1.5; }
+  .newsletter a:link, .newsletter a:visited, .newsletter a:hover, .newsletter a:active {
+    color: #bb0a1e;
+    text-decoration: underline; }
   .newsletter form {
     margin-top: 10px; }
 
