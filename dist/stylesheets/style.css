@@ -5100,7 +5100,7 @@ html {
     text-align: center;
     cursor: pointer; }
     .inline-media--pic__open-gallery a:link, .inline-media--pic__open-gallery a:visited, .inline-media--pic__open-gallery a:hover, .inline-media--pic__open-gallery a:active {
-      color: #555555;
+      color: #bb0a1e;
       text-decoration: none; }
     .inline-media--pic__open-gallery:hover, .inline-media--pic__open-gallery a:hover {
       color: #888888; }
@@ -5184,11 +5184,13 @@ html {
     font-family: "franklin-gothic-urw", sans-serif;
     font-size: 16px;
     font-weight: 700;
-    color: #999;
-    margin: 10px 0 5px 0;
+    color: #bb0a1e;
+    display: block;
+    width: 100%;
+    text-align: center;
     cursor: pointer; }
     .media-package__open-gallery:hover {
-      color: #555; }
+      color: #888888; }
 
 .toggle-more {
   cursor: pointer;
