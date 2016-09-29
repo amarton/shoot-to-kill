@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/baltimore-sun-data/template-longform#readme",
   "devDependencies": {
-    "node-sass": "^3.8.0",
+    "node-sass": "^3.10.0",
     "onchange": "^2.5.0",
-    "uglify-js": "^2.7.0"
+    "uglify-js": "^2.7.3"
   }
 }

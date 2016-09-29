@@ -5169,10 +5169,7 @@ html {
   .media-package__img {
     float: left; }
     .media-package__img--left {
-      width: 49.9%;
       margin-right: 2%; }
-    .media-package__img--right {
-      width: 48.1%; }
     .media-package__img--bottom {
       margin-top: 2%;
       margin-bottom: 10px; }
@@ -5493,7 +5490,8 @@ html {
   .stkNeighborhoods p, .stkNeighborhoods a {
     font-family: " franklin-gothic-urw", sans-serif;
     font-size: 14px;
-    font-weight: 700; }
+    font-weight: 700;
+    margin: 0; }
   .stkNeighborhoods p {
     color: #555555; }
   .stkNeighborhoods a {
@@ -5508,6 +5506,23 @@ html {
         display: none; } }
     .stkNeighborhoods .map .leaflet-control-attribution {
       display: none; }
+  .stkNeighborhoods .mobileMap {
+    display: none;
+    position: relative;
+    width: 100%; }
+    @media (max-width: 600px) {
+      .stkNeighborhoods .mobileMap {
+        display: block; } }
+    .stkNeighborhoods .mobileMap img {
+      width: 100%; }
+    .stkNeighborhoods .mobileMap p {
+      color: #888888; }
+    .stkNeighborhoods .mobileMap .mobileLegend {
+      position: relative;
+      height: 100px; }
+    .stkNeighborhoods .mobileMap .cartodb-legend {
+      width: 250px;
+      left: 20px; }
   .stkNeighborhoods .source {
     margin: 25px auto;
     font-family: " franklin-gothic-urw", sans-serif;
