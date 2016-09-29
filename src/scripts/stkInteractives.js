@@ -6,12 +6,12 @@ var stkGphx = {
 	touchX0: null,
 	touchX1: null,
 	cityNames: [
-		['Baltimore','300','637','3.1','Baltimore',''],
-		['Milwaukee','118','634','6.4','Milwaukee',''],
-		['Charlotte','51','293','6.7','Charlotte',''],
-		['Nashville','61','209','4.4','Nashville',''],
-		['New York','216','921','5.3','NewYork',''],
-		['D.C.','123','299*','3.4','DC','*Washington, D.C., counts non-fatal shootings as any time a person is shot at; the other cities count when victims are struck by gunfire.']
+		['Baltimore','300','637','3.1','Baltimore','Source: Baltimore Police Department'],
+		['Milwaukee','118','634','6.4','Milwaukee','Source: Milwaukee Police Department'],
+		['Charlotte','51','293','6.7','Charlotte','Source: Charlotte-Mecklenburg Police Department'],
+		['Nashville','61','209','4.4','Nashville','Source: Nasvhille Police Department'],
+		['New York','216','921','5.3','NewYork','Source: New York Police Department'],
+		['D.C.','123','299*','3.4','DC','Source: Metropolitan Police Department']
 	],
 	stats: [
 			['262','268','221','344'],
