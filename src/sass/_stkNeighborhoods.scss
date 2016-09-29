@@ -21,6 +21,7 @@
 		font-family: $franklin;
 		font-size: 14px;
 		font-weight: 700;
+		margin: 0;
 	}
 	p {
 		color: $stkDarkGray;
@@ -40,7 +41,28 @@
 			display: none;
 		}
 	}
-	
+	.mobileMap {
+		display: none;
+		position: relative;
+		width: 100%;
+		@media(max-width: $bp6) {
+			display: block;
+		}
+		img {
+			width: 100%;
+		}
+		p {
+			color: $stkLightGray;
+		}
+		.mobileLegend {
+			position: relative;
+			height: 100px;
+		}
+		.cartodb-legend {
+			width: 250px;
+			left: 20px;
+		}
+	}
 	.source {
 		margin: 25px auto;
 		font-family: $franklin;
