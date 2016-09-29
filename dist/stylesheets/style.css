@@ -4962,7 +4962,7 @@ html {
   .article__chapter-title__text {
     display: inline-block;
     font-family: "franklin-gothic-urw", sans-serif;
-    font-size: 3.1em;
+    font-size: 3em;
     color: #bb0a1e;
     text-transform: uppercase; }
     @media (max-width: 515px) {
