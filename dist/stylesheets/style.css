@@ -4965,12 +4965,12 @@ html {
   .article__chapter-title__text {
     display: inline-block;
     font-family: "franklin-gothic-urw", sans-serif;
-    font-size: 3em;
+    font-size: 2.75em;
     color: #bb0a1e;
     text-transform: uppercase; }
     @media (max-width: 515px) {
       .article__chapter-title__text {
-        font-size: 2.3em; } }
+        font-size: 2em; } }
 
 .inline-media__title {
   font-family: "franklin-gothic-urw", sans-serif;
@@ -5083,9 +5083,10 @@ html {
     padding: 10px;
     font-family: "franklin-gothic-urw", sans-serif;
     font-size: 14px;
+    line-height: 1.5;
     color: #555555;
     text-transform: uppercase;
-    text-align: center; }
+    text-align: left; }
   .inline-media--pic__source {
     text-align: right;
     padding: 5px 10px 0 10px;
