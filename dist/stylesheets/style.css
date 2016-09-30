@@ -5135,10 +5135,8 @@ html {
     text-decoration: underline; }
 
 .inline-media--video {
-  border: 0;
-  height: 0;
-  padding-top: 253.125px;
-  background-color: black; }
+  position: relative;
+  margin: 0; }
   @media (max-width: 1200px) {
     .inline-media--video {
       padding-top: 56.25%; } }
