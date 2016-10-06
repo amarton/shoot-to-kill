@@ -4436,6 +4436,10 @@ html {
 .about .center {
   margin: 0 auto; }
 
+.about #podcast {
+  background-color: #eee;
+  padding: 10px; }
+
 .subscribe {
   background-color: #eee;
   padding: 2%; }
