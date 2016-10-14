@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!--CSS-->
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css">
-    <link rel="stylesheet" type="text/css" href="dist/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="dist/stylesheets/style.css?v=1.2">
     <!--Call html5shiv for IE9 and an alt stylesheet for IE8 fallback-->
     <!--if lt IE 9script(src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js")
     -->
@@ -128,16 +128,17 @@
             <li class="chapter"><a href="#chapter-3"><span>Chapter 3</span></a></li>
             <li class="chapter"><a href="#chapter-4"><span>Chapter 4</span></a></li>
             <li class="chapter"><a href="#chapter-5"><span>Chapter 5</span></a></li>
-            <!--li.dropdown.chapter
-            a(href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Series 
-            	div.caret
-            ul.dropdown-menu
-            	li
-            		a(href="#") Title of the second story
-            	li
-            		a(href="#") Title of the third story
-            
-            -->
+            <li class="dropdown chapter"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Series 
+                <div class="caret"></div></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://www.baltimoresun.com/news/maryland/baltimore-city/bal-shoot-to-kill-part-two-story.html"> 
+                    <div class="desktop-series">Part 2: Some Baltimore neighborhoods condemned to endure a shocking degree of violence</div>
+                    <div class="mobile-series">Part 2</div></a></li>
+                <li><a href="http://www.baltimoresun.com/news/maryland/investigations/bal-shoot-to-kill-part-three-story.html">
+                    <div class="desktop-series">Part 3: Baltimore emergency rooms struggle to care for severely wounded patients</div>
+                    <div class="mobile-series">Part 3</div></a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -1123,11 +1124,9 @@
                   <div class="parts-menu__title">Some Baltimore neighborhoods condemned to endure a shocking degree of violence</div></a></li>
               <!--Part 2, inactive-->
               <!--Part 3, inactive-->
-              <li class="parts-menu__item parts-menu__item">
-                <!--a(href="#")//img.parts-menu__thumbnail(src="dist/images/example.jpg" width="75")
-                -->
-                <div class="parts-menu__part-no">COMING SOON: Part 3 <!-- <span class="parts-menu__date"> Date </span>--></div>
-                <div class="parts-menu__title">Trauma surgeons are struggling to save gunshot victims.</div>
+              <li class="parts-menu__item parts-menu__item"><a href="http://www.baltimoresun.com/news/maryland/investigations/bal-shoot-to-kill-part-three-story.html"></a><img class="parts-menu__thumbnail" src="http://www.trbimg.com/img-57fe7a08/turbine/bal-shoot-to-kill-medical-challenges-20161012-002/75/75x42" width="75">
+                <div class="parts-menu__part-no">Part 3 <!-- <span class="parts-menu__date"> Date </span>--></div>
+                <div class="parts-menu__title">Baltimore emergency rooms struggle to care for severely wounded patients</div>
               </li>
               <!--Part 3, inactive-->
             </ul>

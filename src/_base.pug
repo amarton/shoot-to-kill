@@ -21,7 +21,7 @@ html(class="no-js", lang="en")
 
 		//CSS
 		link(rel="stylesheet", href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css")
-		link(rel="stylesheet", type="text/css", href="dist/stylesheets/style.css")
+		link(rel="stylesheet", type="text/css", href="dist/stylesheets/style.css?v=1.2")
 
 		//Call html5shiv for IE9 and an alt stylesheet for IE8 fallback
 		//if lt IE 9
@@ -109,14 +109,18 @@ html(class="no-js", lang="en")
 						li.chapter
 							a(href="#chapter-5")
 								span Chapter 5
-						//li.dropdown.chapter
+						li.dropdown.chapter
 							a(href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Series 
 								div.caret
 							ul.dropdown-menu
 								li
-									a(href="#") Title of the second story
+									a(href="http://www.baltimoresun.com/news/maryland/baltimore-city/bal-shoot-to-kill-part-two-story.html") 
+										.desktop-series Part 2: Some Baltimore neighborhoods condemned to endure a shocking degree of violence
+										.mobile-series Part 2
 								li
-									a(href="#") Title of the third story
+									a(href="http://www.baltimoresun.com/news/maryland/investigations/bal-shoot-to-kill-part-three-story.html")
+										.desktop-series Part 3: Baltimore emergency rooms struggle to care for severely wounded patients
+										.mobile-series Part 3
 
 		//block for story layout
 		block content
